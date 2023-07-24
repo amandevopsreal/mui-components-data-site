@@ -1,13 +1,15 @@
-import { useState } from 'react'
+
 
 import Form from './components/Form'
 import Component1 from './components/Component1';
-
+import Component2 from './components/Component2';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+
+
 
 const App = () => {
 
@@ -17,7 +19,11 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Form />} />
-          <Route path="/home" element={<Component1 />} />
+          <Route path="/home" element={<><Component1 />
+
+            <Component2 />
+          </>
+          } />
         </Routes>
       </Router>
     </>
